@@ -1,0 +1,9 @@
+<div class="comment">
+    <p>{{this.content}}</p>
+    <p>By: {{this.user.username}} at {{formatDate this.createdAt "MM/DD/YYYY [at] h:mm:ss a"}}</p>
+    {{#if user}}
+        {{#if user.id this.user.id}}
+            <button class="delete-comment" data-id="{{this.id}}">Delete</button>
+        {{/if}}
+    {{/if}}
+</div>
